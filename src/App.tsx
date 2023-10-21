@@ -1,4 +1,4 @@
-import './App.css'
+import { FontFamilySelect } from './components/font-family-select'
 import { SearchBox } from './components/search-box'
 import { SearchResults } from './components/search-results'
 import { useDictionary } from './hooks/use-dictionary.hook'
@@ -8,6 +8,7 @@ function App() {
 
   return (
     <div>
+      <FontFamilySelect />
       <div>Dictionary</div>
       <SearchBox />
       {isLoading && <p>loading...</p>}
