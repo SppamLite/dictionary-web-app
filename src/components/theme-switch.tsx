@@ -20,7 +20,7 @@ export const ThemeSwitch = () => {
         checked={isDarkMode}
         onChange={toggle}
       />
-      <div className="relative w-10 h-5 bg-[#757575] rounded-full peer after:content-[''] after:absolute after:bg-white after:rounded-full after:h-[14px] after:w-[14px] after:top-[3px] after:transition-all peer-checked:bg-purple peer-checked:after:translate-x-full"></div>
+      <div className="relative w-10 h-5 bg-[#757575] transition-colors rounded-full peer after:content-[''] after:absolute after:bg-white after:rounded-full after:h-[14px] after:w-[14px] after:left-[3px] after:top-1/2 after:-translate-y-1/2 after:transition-all peer-checked:bg-purple peer-checked:after:translate-x-[20px]"></div>
       <span>
         <svg
           className="ml-3"

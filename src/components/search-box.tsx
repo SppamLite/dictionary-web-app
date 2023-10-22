@@ -29,7 +29,7 @@ export const SearchBox = () => {
   return (
     <div className="flex items-center pr-6 rounded-2xl border border-solid border-transparent transition-colors focus-within:border-purple bg-[#F4F4F4] dark:bg-[#1F1F1F]">
       <input
-        className={`text-black text-base md:text-xl focus:outline-none bg-transparent w-full h-12 md:h-16 px-6 font-bold ${fontFamily}`}
+        className={`text-black dark:text-white text-base md:text-xl focus:outline-none bg-transparent w-full h-12 md:h-16 px-6 font-bold ${fontFamily}`}
         onChange={handleSearch}
         defaultValue={inputWord}
       />
