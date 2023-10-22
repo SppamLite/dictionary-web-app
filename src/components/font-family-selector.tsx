@@ -14,7 +14,7 @@ const fontFamilyNames = {
 
 type Handler = MouseEventHandler<HTMLButtonElement>
 
-export const FontFamilySelect = () => {
+export const FontFamilySelector = () => {
   const fontFamily = useStore($fontFamily)
 
   const [isOpen, setIsOpen] = useState(false)
@@ -42,7 +42,7 @@ export const FontFamilySelect = () => {
         ref={refs.setReference}
         {...getReferenceProps()}
       >
-        <span className="">{fontFamilyNames[fontFamily]}</span>
+        <span>{fontFamilyNames[fontFamily]}</span>
         <svg
           className="ml-4"
           width="13"

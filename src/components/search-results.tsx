@@ -17,11 +17,11 @@ export const SearchResults = ({ wordDefs }: Props) => {
   return wordDefs.map((def) => (
     <div key={nanoid()}>
       <h2
-        className={`text-[2rem] ${fontFamily} text-black dark:text-white font-bold`}
+        className={`text-[2rem] md:text-[4rem] ${fontFamily} text-black dark:text-white font-bold`}
       >
         {def.word}
       </h2>
-      <p className="text-lg text-purple">{def.phonetic}</p>
+      <p className="text-lg md:text-2xl text-purple">{def.phonetic}</p>
       <div>
         {def.meanings.map((meaning) => (
           <div key={nanoid()}>{meaning.definitions[0].definition}</div>
