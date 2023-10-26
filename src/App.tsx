@@ -10,7 +10,7 @@ function App() {
 
   return (
     <main className="p-6 bg-white dark:bg-[#050505] transition-colors">
-      <header className="flex justify-between">
+      <header className="flex justify-between mb-6">
         <img
           className="h-8 w-auto md:w-8 md:h-auto"
           src={logo}

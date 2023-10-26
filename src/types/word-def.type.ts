@@ -1,4 +1,4 @@
-type Phonetic = {
+export type Phonetic = {
   text: string
   audio?: string
 }
@@ -10,7 +10,7 @@ type Definition = {
   antonyms: string[]
 }
 
-type Meaning = {
+export type Meaning = {
   partOfSpeech: string
   definitions: Definition[]
 }
@@ -20,4 +20,5 @@ export type WordDef = {
   phonetic: string
   phonetics: Phonetic[]
   meanings: Meaning[]
+  sourceUrls: string[]
 }
