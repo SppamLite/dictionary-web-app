@@ -1,9 +1,9 @@
-import { useCallback, useEffect, useState } from 'react'
 import { useStore } from '@nanostores/react'
 import { ofetch } from 'ofetch'
+import { useCallback, useEffect, useState } from 'react'
 
-import { $word } from '../store/word'
 import { db } from '../db/db'
+import { $word } from '../store/word'
 import { WordDef } from '../types/word-def.type'
 
 export const useDictionary = () => {

@@ -23,6 +23,7 @@ export const AudioPlayButton = ({ audioUrl }: Props) => {
             width="75"
             height="75"
             viewBox="0 0 75 75"
+            className="w-12 h-12 md:w-auto md:h-auto"
           >
             <g fill="#A445ED" fillRule="evenodd">
               <circle

@@ -1,14 +1,12 @@
 import { ChangeEventHandler, useCallback, useEffect } from 'react'
+import { useDebounce } from 'usehooks-ts'
+
 import { useStateParams } from '../hooks/use-state-params.hook'
 import { setWord } from '../store/word'
-import { $fontFamily } from '../store/settings'
-import { useStore } from '@nanostores/react'
-import { useDebounce } from 'usehooks-ts'
 
 type Handler = ChangeEventHandler<HTMLInputElement>
 
 export const SearchBox = () => {
-  const fontFamily = useStore($fontFamily)
   const [inputWord, setInputWord] = useStateParams<string>(
     'keyboard',
     'word',
@@ -29,7 +27,7 @@ export const SearchBox = () => {
   return (
     <div className="flex items-center pr-6 rounded-2xl border border-solid border-transparent transition-colors focus-within:border-purple bg-[#F4F4F4] dark:bg-[#1F1F1F]">
       <input
-        className={`text-black dark:text-white transition-colors text-base md:text-xl focus:outline-none bg-transparent w-full h-12 md:h-16 px-6 font-bold ${fontFamily}`}
+        className="text-black dark:text-white transition-colors text-base md:text-xl focus:outline-none bg-transparent w-full h-12 md:h-16 px-6 font-bold"
         onChange={handleSearch}
         defaultValue={inputWord}
       />

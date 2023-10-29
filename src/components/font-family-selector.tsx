@@ -1,10 +1,11 @@
-import { useStore } from '@nanostores/react'
-import { $fontFamily, setFontFamily } from '../store/settings'
-import { useState } from 'react'
 import { useClick, useFloating, useInteractions } from '@floating-ui/react'
-import { FontFamily, fontFamilies } from '../types/font-families.type'
+import { useStore } from '@nanostores/react'
+import { useState } from 'react'
 import { useCallback } from 'react'
 import { MouseEventHandler } from 'react'
+
+import { $fontFamily, setFontFamily } from '../store/settings'
+import { FontFamily, fontFamilies } from '../types/font-families.type'
 
 const fontFamilyNames = {
   'font-sans': 'Sans Serif',

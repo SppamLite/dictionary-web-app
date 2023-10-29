@@ -1,4 +1,5 @@
 import Dexie, { Table } from 'dexie'
+
 import { WordDef } from '../types/word-def.type'
 
 export class SubClassedDexie extends Dexie {

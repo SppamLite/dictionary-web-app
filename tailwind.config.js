@@ -18,7 +18,11 @@ export default {
       serif: ['Lora', ...defaultTheme.fontFamily.serif],
       mono: ['Inconsolata', ...defaultTheme.fontFamily.mono],
     },
-    extend: {},
+    extend: {
+      height: {
+        screen: ['100vh', '100dvh'],
+      },
+    },
   },
   plugins: [],
 }

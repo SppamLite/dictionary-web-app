@@ -1,7 +1,6 @@
 import { nanoid } from 'nanoid'
+
 import { Phonetic, WordDef } from '../types/word-def.type'
-import { useStore } from '@nanostores/react'
-import { $fontFamily } from '../store/settings'
 import { AudioPlayButton } from './audio-play-button'
 import { WordMeaning } from './word-meaning'
 
@@ -17,8 +16,6 @@ const getAudioUrl = (phonetics: Phonetic[]) => {
 }
 
 export const SearchResults = ({ wordDefs }: Props) => {
-  const fontFamily = useStore($fontFamily)
-
   if (wordDefs.length === 0) {
     return <div>empty result</div>
   }
@@ -27,11 +24,9 @@ export const SearchResults = ({ wordDefs }: Props) => {
     <div className="mt-6">
       {wordDefs.map((def) => (
         <div key={nanoid()}>
-          <div className="flex items-center">
+          <div className="flex items-center mb-8">
             <div>
-              <h2
-                className={`text-[2rem] md:text-[4rem] ${fontFamily} text-black dark:text-white font-bold transition-colors`}
-              >
+              <h2 className="text-[2rem] md:text-[4rem] text-black dark:text-white font-bold transition-colors">
                 {def.word}
               </h2>
               <p className="text-lg md:text-2xl text-purple">{def.phonetic}</p>
@@ -46,7 +41,10 @@ export const SearchResults = ({ wordDefs }: Props) => {
           <div className="border-t border-[#E9E9E9] dark:border-[#3A3A3A] transition-colors pt-6 mt-8">
             <h4 className="text-[#757575]">Source</h4>
             {def.sourceUrls.map((url) => (
-              <p className="text-black dark:text-white transition-colors">
+              <p
+                className="text-black dark:text-white transition-colors"
+                key={nanoid()}
+              >
                 {url}
               </p>
             ))}

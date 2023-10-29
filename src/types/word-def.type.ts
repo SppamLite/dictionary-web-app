@@ -6,13 +6,13 @@ export type Phonetic = {
 type Definition = {
   definition: string
   example: string
-  synonyms: string[]
-  antonyms: string[]
 }
 
 export type Meaning = {
   partOfSpeech: string
   definitions: Definition[]
+  synonyms: string[]
+  antonyms: string[]
 }
 
 export type WordDef = {

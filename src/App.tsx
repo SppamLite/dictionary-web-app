@@ -1,15 +1,21 @@
+import { useStore } from '@nanostores/react'
+
+import logo from './assets/icons/logo.svg'
 import { FontFamilySelector } from './components/font-family-selector'
 import { SearchBox } from './components/search-box'
 import { SearchResults } from './components/search-results'
-import { useDictionary } from './hooks/use-dictionary.hook'
-import logo from './assets/icons/logo.svg'
 import { ThemeSwitch } from './components/theme-switch'
+import { useDictionary } from './hooks/use-dictionary.hook'
+import { $fontFamily } from './store/settings'
 
 function App() {
   const { isLoading, wordDefs } = useDictionary()
+  const fontFamily = useStore($fontFamily)
 
   return (
-    <main className="p-6 bg-white dark:bg-[#050505] transition-colors">
+    <main
+      className={`p-6 bg-white dark:bg-[#050505] transition-colors h-screen overflow-y-auto ${fontFamily}`}
+    >
       <header className="flex justify-between mb-6">
         <img
           className="h-8 w-auto md:w-8 md:h-auto"
