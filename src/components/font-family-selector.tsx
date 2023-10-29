@@ -17,7 +17,6 @@ type Handler = MouseEventHandler<HTMLButtonElement>
 
 export const FontFamilySelector = () => {
   const fontFamily = useStore($fontFamily)
-
   const [isOpen, setIsOpen] = useState(false)
 
   const { refs, floatingStyles, context } = useFloating({
@@ -39,7 +38,7 @@ export const FontFamilySelector = () => {
     <div className="text-black dark:text-white font-bold">
       <button
         type="button"
-        className={`text-sm inline-flex items-center ${fontFamily}`}
+        className="text-sm inline-flex items-center"
         ref={refs.setReference}
         {...getReferenceProps()}
       >

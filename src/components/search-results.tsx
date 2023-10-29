@@ -29,7 +29,9 @@ export const SearchResults = ({ wordDefs }: Props) => {
               <h2 className="text-[2rem] md:text-[4rem] text-black dark:text-white font-bold transition-colors">
                 {def.word}
               </h2>
-              <p className="text-lg md:text-2xl text-purple">{def.phonetic}</p>
+              <p className="text-lg md:text-2xl text-purple font-sans">
+                {def.phonetic}
+              </p>
             </div>
             <AudioPlayButton audioUrl={getAudioUrl(def.phonetics)} />
           </div>
@@ -42,7 +44,7 @@ export const SearchResults = ({ wordDefs }: Props) => {
             <h4 className="text-[#757575]">Source</h4>
             {def.sourceUrls.map((url) => (
               <p
-                className="text-black dark:text-white transition-colors"
+                className="text-black dark:text-white transition-colors break-words"
                 key={nanoid()}
               >
                 {url}
