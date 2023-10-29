@@ -1,8 +1,11 @@
-import { atom } from 'nanostores'
+import { persistentAtom } from '@nanostores/persistent'
 
 import { FontFamily } from '../types/font-families.type'
 
-export const $fontFamily = atom<FontFamily>('font-sans')
+export const $fontFamily = persistentAtom<FontFamily>(
+  'settings-font-family',
+  'font-sans',
+)
 
 export const setFontFamily = (fontFamily: FontFamily) =>
   $fontFamily.set(fontFamily)
