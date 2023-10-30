@@ -43,12 +43,31 @@ export const SearchResults = ({ wordDefs }: Props) => {
           <div className="border-t border-[#E9E9E9] dark:border-[#3A3A3A] transition-colors pt-6 mt-8">
             <h4 className="text-[#757575]">Source</h4>
             {def.sourceUrls.map((url) => (
-              <p
-                className="text-black dark:text-white transition-colors break-words"
+              <a
+                className="text-black dark:text-white transition-colors hover:underline flex items-center gap-2"
                 key={nanoid()}
+                href={url}
+                target="_blank"
               >
                 {url}
-              </p>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                  >
+                    <path
+                      fill="none"
+                      stroke="#838383"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                      d="M6.09 3.545H2.456A1.455 1.455 0 0 0 1 5v6.545A1.455 1.455 0 0 0 2.455 13H9a1.455 1.455 0 0 0 1.455-1.455V7.91m-5.091.727 7.272-7.272m0 0H9m3.636 0V5"
+                    />
+                  </svg>
+                </span>
+              </a>
             ))}
           </div>
         </div>

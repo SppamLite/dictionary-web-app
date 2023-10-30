@@ -14,7 +14,7 @@ function App() {
 
   return (
     <main
-      className={`p-6 bg-white dark:bg-[#050505] transition-colors h-screen overflow-y-auto ${fontFamily}`}
+      className={`p-6 md:px-10 md:pt-[58px] max-w-[736px] m-auto ${fontFamily}`}
     >
       <header className="flex justify-between mb-6">
         <img

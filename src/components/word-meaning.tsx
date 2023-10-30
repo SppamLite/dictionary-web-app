@@ -22,7 +22,7 @@ export const WordMeaning = ({ meaning }: Props) => {
         Meaning
       </h3>
       {meaning.definitions.length > 0 && (
-        <ul className="list-disc list-inside marker:text-purple mt-[17px]">
+        <ul className="list-disc list-inside marker:text-purple mt-4 md:mt-6 md:pl-[22px]">
           {meaning.definitions.map((d) => (
             <li
               key={nanoid()}
