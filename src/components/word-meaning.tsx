@@ -26,9 +26,12 @@ export const WordMeaning = ({ meaning }: Props) => {
           {meaning.definitions.map((d) => (
             <li
               key={nanoid()}
-              className="text-black dark:text-white transition-colors [&:not(:last-of-type)]:mb-[13px]"
+              className="text-black dark:text-white transition-colors [&:not(:last-of-type)]:mb-3"
             >
               {d.definition}
+              {d.example && (
+                <p className="text-[#757575] pl-5 mt-3">“{d.example}”</p>
+              )}
             </li>
           ))}
         </ul>
