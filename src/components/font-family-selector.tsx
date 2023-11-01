@@ -35,7 +35,7 @@ export const FontFamilySelector = () => {
   }, [])
 
   return (
-    <div className="text-black dark:text-white font-bold">
+    <div className="text-black dark:text-white font-bold transition-colors">
       <button
         type="button"
         className="text-sm inline-flex items-center"
@@ -59,7 +59,7 @@ export const FontFamilySelector = () => {
           ref={refs.setFloating}
           style={floatingStyles}
           {...getFloatingProps()}
-          className="bg-white dark:bg-[#1F1F1F] flex flex-col p-6 gap-4 rounded-2xl shadow-[0_5px_30px_0_rgba(0,0,0,0.10)] dark:shadow-purple"
+          className="bg-white dark:bg-[#1F1F1F] transition-colors flex flex-col p-6 gap-4 rounded-2xl shadow-[0_5px_30px_0_rgba(0,0,0,0.10)] dark:shadow-purple"
         >
           {fontFamilies.map((f) => (
             <button

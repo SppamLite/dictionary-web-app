@@ -16,8 +16,8 @@ export const WordSynonyms = ({ synonyms }: Props) => {
   if (!synonyms.length) return null
 
   return (
-    <h3 className="text-base md:text-xl text-[#757575] font-normal">
-      Synonyms
+    <h3 className="text-base md:text-xl text-[#757575] font-normal mt-6">
+      <span className="mr-6">Synonyms</span>
       {synonyms.map((s, index) => (
         <span
           className="text-purple font-bold cursor-pointer hover:underline"
