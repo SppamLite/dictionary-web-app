@@ -22,16 +22,19 @@ export const WordMeaning = ({ meaning }: Props) => {
         Meaning
       </h3>
       {meaning.definitions.length > 0 && (
-        <ul className="list-disc list-inside marker:text-purple mt-4 md:mt-6 md:pl-[22px]">
+        <ul className="mt-4 md:mt-6 md:pl-[22px]">
           {meaning.definitions.map((d) => (
             <li
               key={nanoid()}
-              className="text-black dark:text-white transition-colors [&:not(:last-of-type)]:mb-3"
+              className="text-black dark:text-white transition-colors [&:not(:last-of-type)]:mb-3 flex gap-5"
             >
-              {d.definition}
-              {d.example && (
-                <p className="text-[#757575] pl-5 mt-3">“{d.example}”</p>
-              )}
+              <div className="w-full max-w-[5px] h-[5px] bg-purple rounded-full mt-[10px]" />
+              <div>
+                {d.definition}
+                {d.example && (
+                  <p className="text-[#757575] mt-3">“{d.example}”</p>
+                )}
+              </div>
             </li>
           ))}
         </ul>

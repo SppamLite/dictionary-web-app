@@ -9,7 +9,7 @@ import { useDictionary } from './hooks/use-dictionary.hook'
 import { $fontFamily } from './store/settings'
 
 function App() {
-  const { isLoading, wordDefs } = useDictionary()
+  const { isLoading, dictError, wordDefs } = useDictionary()
   const fontFamily = useStore($fontFamily)
 
   return (
@@ -30,6 +30,7 @@ function App() {
       </header>
       <SearchBox />
       {isLoading && <p>loading...</p>}
+      {dictError && <p>{dictError}</p>}
       {!isLoading && wordDefs && <SearchResults wordDefs={wordDefs} />}
     </main>
   )
